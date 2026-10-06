@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy | Steep Notes</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <a class="brand" href="./">Steep</a>
+        <p class="tagline">A week of loose thoughts, brewed into a few sentences.</p>
+      </header>
+
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated October 5, 2026</p>
+      <p class="lead">
+        Steep keeps your pieces and sentences on your phone. There's no account. To write sentences,
+        Steep sends the text of your pieces to an AI, and it asks your permission first. A few other
+        things can leave your phone, like dictation audio and your subscription status. Each one is
+        covered below.
+      </p>
+
+      <div class="card">
+        <p>
+          <strong>The short version.</strong> We don't have a copy of your pieces. They're stored on your
+          phone, along with your photos and sentences. When Steep brews, the text of your pieces passes
+          through our relay to Claude, Anthropic's AI, and the sentences come back. The relay doesn't save
+          either one.
+        </p>
+      </div>
+
+      <h2>What stays on your phone</h2>
+      <ul>
+        <li>The pieces you write, dictate, or share into Steep, and any photo you attach to one</li>
+        <li>The sentences Steep writes, the ones you keep, and your monthly results</li>
+        <li>Your settings, such as your brew day and time</li>
+        <li>
+          A few records Steep never sends anywhere, with none of your pieces or sentences in them: how much it
+          uses the AI, recent errors, and how many of each kind of sentence you keep, brew by brew
+        </li>
+      </ul>
+      <p>
+        Steep is built to let go. When you finish a brew, the week's pieces and the sentences you didn't
+        keep disappear from the app. They move to an archive on your phone, where you can't browse them,
+        and each one is deleted a year later. Until then, Steep draws on that archive for the old
+        sentences it brings back. An old sentence that comes back to you disappears if you don't keep it
+        within a day.
+      </p>
+      <p>
+        Photos you attach stay in Steep on your phone. Steep never uploads them and never sends them to
+        the AI. Steep never adds anything to your photo library on its own. A monthly result lands there
+        only if you tap Send Out and choose Save Image.
+      </p>
+      <p>
+        If iCloud Backup is on, it includes Steep's data, as it does for most apps. That backup lives in
+        your Apple account, and we can't see it.
+      </p>
+
+      <h2>What goes to the AI</h2>
+      <p>
+        To write sentences, Steep sends text to Claude, an AI model made by Anthropic. Steep asks for your
+        permission before it sends anything. If you turn it off later in Settings, Steep stops sending
+        your text. Brewing and Steep's other AI features pause until you turn it back on.
+      </p>
+      <p>What gets sent, and when:</p>
+      <ul>
+        <li>At brew time: the text of that week's pieces</li>
+        <li>
+          Right after each brew, to write the old sentences that come back to you: a sample of text from
+          the past year, including earlier pieces and sentences you didn't keep
+        </li>
+        <li>At the end of the month: the sentences you kept</li>
+      </ul>
+      <p>
+        Steep doesn't send your photos or your name. There's no account, but each request includes the
+        random ID described under Subscriptions. Requests go through our relay server, which runs on
+        Supabase. The relay checks that ID with RevenueCat to make sure your subscription or free trial is
+        active, then passes your text to Anthropic and hands the sentences back to your phone. It doesn't
+        save your text or the sentences, and Anthropic never gets the ID.
+      </p>
+      <p>
+        The relay also caps how much AI each ID can use in a day. To keep count, it stores a hashed copy
+        of the ID (scrambled one way, so it can't be turned back into the ID) along with that day's number
+        of requests and how much text they carried. Each day's count is deleted after two days.
+      </p>
+      <p>
+        If a request fails, the relay logs what kind of error it was, never your text or the ID. Like most
+        hosts, Supabase keeps a short-lived log of each request. It records your IP address and the rough
+        location it points to, such as city and country, but not your text. Anthropic sees our server,
+        not your phone or your IP address.
+      </p>
+      <p>
+        Under its commercial terms, Anthropic doesn't train its models on this text, and deletes it within
+        30 days unless it needs to keep it longer to enforce its usage policy or comply with the law. See
+        <a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data" target="_blank" rel="noopener noreferrer">how long Anthropic keeps API data</a>
+        and <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener noreferrer">Anthropic's privacy policy</a>.
+      </p>
+
+      <h2>Dictation</h2>
+      <p>
+        If you dictate a piece, your phone turns your speech into text. If it can't do that offline in
+        your language, the audio goes to Apple's speech recognition service under
+        <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple's privacy policy</a>.
+        Steep keeps only the text.
+      </p>
+
+      <h2>Reminders, sharing, and the widget</h2>
+      <ul>
+        <li>
+          If you connect Apple Reminders, Steep reads your reminders to show them in the Tasks tab and adds
+          one only when you ask it to. This happens on your phone.
+        </li>
+        <li>When you share text, a link, or an image to Steep from another app, it becomes a piece on your phone.</li>
+        <li>
+          If you turn on the widget in Settings, Steep stores your upcoming sentences where the widget can
+          read them. They stay on your phone, and turning the widget off clears them.
+        </li>
+        <li>Notifications are scheduled on your phone. Steep doesn't use a push server.</li>
+      </ul>
+
+      <h2>Subscriptions</h2>
+      <p>
+        Purchases run through the App Store, and we use RevenueCat to check whether your subscription is
+        active. RevenueCat receives what it needs to do that, such as:
+      </p>
+      <ul>
+        <li>The purchase receipt from Apple</li>
+        <li>A random ID Steep creates on your phone, not tied to your name or email</li>
+        <li>Basic device and app details: platform, OS version, app version, and country</li>
+        <li>Your IP address, as with any server request</li>
+        <li>When the app last checked your subscription</li>
+      </ul>
+      <p>
+        Before each AI request, our relay also asks RevenueCat whether that same random ID has an active
+        subscription or free trial. It sends RevenueCat only the ID, never your text.
+      </p>
+      <p>
+        We never send your name, email address, or advertising ID, and the app never asks for them. Apple
+        handles the payment. We never see your card.
+      </p>
+
+      <h2>The services we use</h2>
+      <p>
+        Steep relies on three services to work: Anthropic (the AI), Supabase (the relay's host), and
+        RevenueCat (subscription status). We chose them because their terms protect this data at least
+        as well as this policy does, and we don't use any others.
+      </p>
+
+      <h2>What we do not do</h2>
+      <ul>
+        <li>No ads and no ad SDKs</li>
+        <li>No tracking across apps or websites</li>
+        <li>No analytics on what you write</li>
+        <li>No selling your personal information, and no sharing it for advertising</li>
+      </ul>
+
+      <h2>Deleting your data</h2>
+      <p>
+        Delete a piece in Steep and it's gone from your phone. Discarding a sentence works differently: it
+        goes to the archive with everything else Steep lets go of, and it's deleted within a year. The only
+        way to clear the archive sooner is to delete the app. Delete the app and everything stored inside
+        it goes with it.
+      </p>
+      <p>
+        A phone backup made before you deleted the app may still include its data. That backup is yours,
+        so we can't see it or delete it. We don't keep a copy of your pieces or sentences, so there are
+        none for us to delete. The relay's daily usage counts are deleted on their own after two days.
+        Text already sent to the AI is handled under Anthropic's
+        policy described above. Purchase records held by RevenueCat and Apple are governed by their own
+        policies. See
+        <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener noreferrer">RevenueCat's privacy policy</a>
+        and <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple's</a>.
+      </p>
+
+      <h2>Children</h2>
+      <p>
+        Steep is not directed to children under 13, and we do not knowingly collect information from
+        them.
+      </p>
+
+      <h2>Your rights</h2>
+      <p>
+        Privacy laws in some places (including the GDPR in Europe and the CCPA in California) give you
+        the right to see, correct, or delete personal information a company holds about you. Apart from
+        the purchase records, the two-day usage counts, and the short-lived server logs described above,
+        we hold nothing about you.
+        There's no name, no email, and no profile. To have your purchase records deleted, email us with
+        the order ID from your Apple receipt, and we'll ask RevenueCat to remove them.
+      </p>
+
+      <h2>Changes</h2>
+      <p>
+        If this policy changes, the date at the top changes with it. If a change means something new
+        would leave your phone, Steep will ask you in the app first.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Steep Notes is made by Jinho Lee in Decatur, Georgia. Questions about privacy:
+        <a href="mailto:support@steepnotes.app">support@steepnotes.app</a>
+      </p>
+
+      <footer>
+        <a href="./">Home</a><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a>
+      </footer>
+    </div>
+  </body>
+</html>
